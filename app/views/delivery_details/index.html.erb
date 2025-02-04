@@ -1,0 +1,19 @@
+<h1>Delivery Details</h1>
+
+<%= link_to 'Add New Delivery Detail', new_delivery_detail_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Delivery Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @delivery_details.each do |detail| %>
+      <tr>
+        <td><%= detail.date %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

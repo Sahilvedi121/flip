@@ -1,0 +1,52 @@
+<h1>Create Profile</h1>
+<%# <%= form_for @profile, local: true do |form| %> 
+  <%# <p> %>
+    <%# <%= form.label :name %> 
+    <%# <%= form.text_field :name %> 
+  <%# </p> %>
+  <%# <p> %>
+    <%# <%= form.label :contact_no %> 
+    <%# <%= form.text_field :contact_no %> 
+  <%# </p> %>
+  <%# <p> %>
+    <%# <%= form.label :age %> 
+    <%# <%= form.text_field :age %> 
+  <%# </p> %>
+  <%# <p> %>
+    <%# <%= form.label :gender %> 
+    <%# <%= form.radio_button :gender, "male"  %>
+    <%# <%= form.radio_button :gender, "female" %>
+  <%# </p> %>
+  <%# <p> %>
+    <%# <%= form.submit "Save Profile" %> 
+      <%# </p> %>
+<%# <% end %>  
+
+
+
+
+
+
+
+
+
+
+<%= form_with model: @profile, local: true do |form| %>
+  <p>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :contact_no %>
+    <%= form.text_field :contact_no %>
+  </p>
+  <p>
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </p>
+  <p>
+    <%= form.label :gender %>
+    <%= form.select :gender, ['Male', 'Female', 'Other'] %>
+  </p>
+  <%= form.submit 'Save' %>
+<% end %>

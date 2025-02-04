@@ -1,0 +1,21 @@
+<h1>Edit Address</h1>
+
+<%= form_with model: @address, local: true do |form| %>
+  <p>
+    <%= form.label :colony %><br>
+    <%= form.text_field :colony %>
+  </p>
+  <p>
+    <%= form.label :city %><br>
+    <%= form.text_field :city %>
+  </p>
+  <p>
+    <%= form.label :pincode %><br>
+    <%= form.number_field :pincode %>
+  </p>
+  <p>
+    <%= form.label :country %><br>
+    <%= form.text_field :country %>
+  </p>
+  <%= form.submit 'Save' %>
+<% end %>

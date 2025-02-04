@@ -1,0 +1,29 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  # For details on connection pooling, see Rails configuration guide
+  # https://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: flip_development
+  port: 5432
+  host: localhost
+  username: postgres
+  password: postgres
+
+test:
+  <<: *default
+  database: flip_test
+  port: 5432
+  host: localhost
+  username: postgres
+  password: postgres
+
+production:
+  <<: *default
+  database: flip_production
+  username: flip
+  password: <%= ENV["FLIP_DATABASE_PASSWORD"] %>
+  

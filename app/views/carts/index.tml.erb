@@ -1,0 +1,19 @@
+<h1>Your Orders</h1>
+
+<table>
+  <tr>
+    <th>Order ID</th>
+    <th>Total Price</th>
+    <th>Status</th>
+    <th>Action</th>
+  </tr>
+
+  <% @orders.each do |order| %>
+    <tr>
+      <td><%= order.id %></td>
+      <td>$<%= order.total_price %></td>
+      <td><%= order.status %></td>
+      <td><%= link_to "View", order_path(order), class: "btn btn-info" %></td>
+    </tr>
+  <% end %>
+</table>
