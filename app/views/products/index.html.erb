@@ -33,3 +33,4 @@
 <% if user_signed_in? %>
   <%= button_to "Logout", destroy_user_session_path, method: :delete, data: { no_turbolink: true } %>
 <% end %>
+<%= button_to 'Login with Google', user_google_oauth2_omniauth_authorize_path, method: :post, :data => {turbo: "false"} %>
