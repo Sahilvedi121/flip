@@ -69,4 +69,4 @@ gem 'omniauth-google-oauth2'
 gem "omniauth-rails_csrf_protection"
 gem 'pundit' # For authorization
 gem 'rack-cors' # For handling CORS in APIs
-gem 'omniauth', '~> 2.0'
+gem 'omniauth', '~> 2.1'
